@@ -1,0 +1,4 @@
+%syntax-version=1.0.0
+%project=app
+
+0000000001-initial 2017-12-04T08:26:58Z root <root@moby> # Add 0000000001-initial migration
