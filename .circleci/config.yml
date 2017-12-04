@@ -105,6 +105,9 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get install liblist-moreutils-perl
+            sudo apt-get install libdbd-pg-perl
+            sudo apt-get install build-essential cpanminus perl perl-doc
+            apt-get install libpq-dev
             curl -L https://cpanmin.us | perl - App::cpanminus
             cpanm App::Sqitch DBD::Pg
       - save_cache:
