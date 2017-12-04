@@ -125,7 +125,7 @@ jobs:
           name: deploy the latest database migrations
           command: |
             cd db/migrations
-            sqitch config --user engine.pg.client /opt/local/pgsql/bin/psql
+            # sqitch config --user engine.pg.client /opt/local/pgsql/bin/psql
             sqitch config --user user.name 'CircleCI'
             sqitch config --user user.email 'bot@circleci.com'
             sqitch target add production db:pg://$SUPER_USER:$PRODUCTION_SUPER_USER_PASSWORD@$PRODUCTION_DB_HOST/$DB_NAME
