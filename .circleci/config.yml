@@ -104,9 +104,9 @@ jobs:
           name: install dependencies
           command: |
             sudo apt-get update
-            apt-get install build-essential cpanminus perl perl-doc
-            cpanm --quiet --notest App::Sqitch
-            apt-get install postgresql libdbd-pg-perl
+            sudo apt-get install build-essential cpanminus perl perl-doc
+            sudo cpanm --quiet --notest App::Sqitch
+            sudo apt-get install postgresql libdbd-pg-perl
       - save_cache:
           paths:
             - ~/perl5
