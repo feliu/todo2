@@ -119,7 +119,7 @@ jobs:
           command: |
             docker build -t openresty ./openresty/
             docker tag openresty $OPENRESTY_REPO_URI:$CIRCLE_TAG
-            aws ecr get-login --region $AWS_REGION
+            aws ecr get-login --region $AWS_REGION --no-include-email | sh
             docker push $OPENRESTY_REPO_URI:$CIRCLE_TAG
       - deploy:
           name: deploy the latest database migrations
